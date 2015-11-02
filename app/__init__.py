@@ -12,10 +12,6 @@ assets = None
 
 
 def create_app(**config_overrides):
-    """This is normal setup code for a Flask app, but we give the option
-    to provide override configurations so that in testing, a different
-    database can be used.
-    """
     from app.routes.base import register_error_handlers
 
     # we want to modify the global app, not a local copy
@@ -47,8 +43,6 @@ def create_app(**config_overrides):
 
 
 def register_logger(app):
-    """Create an error logger and attach it to ``app``."""
-
     max_bytes = int(app.config["LOG_FILE_MAX_SIZE"]) * 1024 * 1024   # MB to B
     # Use "# noqa" to silence flake8 warnings for creating a variable that is
     # uppercase.  (Here, we make a class, so uppercase is correct.)
@@ -69,21 +63,12 @@ def register_logger(app):
 
 
 def register_blueprints(app):
-    """Registers all the Blueprints (modules) in a function, to avoid
-    circular dependancies.
-
-    Be careful rearranging the order of the app.register_blueprint()
-    calls, as it can also result in circular dependancies.
-    """
     from app.routes import organizations, client
     app.register_blueprint(organizations, url_prefix="/organization")
     app.register_blueprint(client)
 
 
 def register_scss():
-    """Registers the Flask-Assets rules for scss compilation.  This reads from
-    ``config/scss.json`` to make these rules.
-    """
     assets.url = app.static_url_path
     with open(app.config['SCSS_CONFIG_FILE']) as f:
         bundle_set = json.loads(f.read())
@@ -95,7 +80,6 @@ def register_scss():
                             depends=depends,
                             filters='scss')
             assets.register(bundle_name, bundle)
-
 
 def run():
     """Runs the app."""

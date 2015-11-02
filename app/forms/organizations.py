@@ -15,5 +15,10 @@ class CreateOrganizationForm(Form):
     ])
     confirm = PasswordField('Repeat Password')
 
+class OrganizationLoginForm(Form):
+  email = StringField('Email Address')
+  password = PasswordField('Password')
+
+
 
 
