@@ -75,7 +75,8 @@ def register_blueprints(app):
     Be careful rearranging the order of the app.register_blueprint()
     calls, as it can also result in circular dependancies.
     """
-    from app.routes import client
+    from app.routes import organizations, client
+    app.register_blueprint(organizations, url_prefix="/organization")
     app.register_blueprint(client)
 
 
