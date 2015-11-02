@@ -1,13 +1,3 @@
-"""
-.. module:: __init__
-    :synopsis: This is where all our global variables and instantiation
-        happens. If there is simple app setup to do, it can be done here, but
-        more complex work should be farmed off elsewhere, in order to keep
-        this file readable.
-
-.. moduleauthor:: Dan Schlosser <dan@dan@schlosser.io>
-"""
-
 import json
 import logging
 

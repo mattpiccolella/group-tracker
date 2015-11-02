@@ -1,18 +1,8 @@
-"""
-.. module:: base
-    :synopsis: All routes on the ``base`` Blueprint, as well as error handlers,
-        before and after request handlers, and context processors.
-
-.. moduleauthor:: Dan Schlosser <dan@dan@schlosser.io>
-"""
-
 from flask import render_template, request, url_for
 import sys
 
-SUPER_USER_GPLUS_ID = 'super'
 ERROR_FLASH = 'error'
 MESSAGE_FLASH = 'message'
-
 
 def register_error_handlers(app):
 

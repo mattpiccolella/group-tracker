@@ -1,10 +1,3 @@
-"""
-.. module:: User
-    :synopsis: A user database model.
-
-.. moduleauthor:: Dan Schlosser <dan@dan@schlosser.io>
-"""
-
 from app import db
 from datetime import datetime
 

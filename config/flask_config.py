@@ -19,7 +19,7 @@ try:
     META_DOMAIN = 'mattpic.com'
     SSL = False
     META_URL = ('https://' if SSL else 'http://') + META_DOMAIN
-    META_IMAGE = 'img/CHANGE_ME.jpg'
+    META_IMAGE = 'img/favicon-128.png'
 
     # SCSS Options
     SCSS_CONFIG_FILE = 'config/scss.json'
@@ -32,7 +32,7 @@ try:
     WTF_CSRF_ENABLED = True
 
     # MongoDB configurations
-    MONGODB_SETTINGS = {'DB': 'CHANGEME'}
+    MONGODB_SETTINGS = {'DB': 'development'}
 
     # Logging configurations
     LOG_FILE_MAX_SIZE = '256'

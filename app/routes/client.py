@@ -1,10 +1,3 @@
-"""
-.. module:: client
-    :synopsis: All routes on the ``client`` Blueprint.
-
-.. moduleauthor:: Dan Schlosser <dan@dan@schlosser.io>
-"""
-
 from flask import Blueprint, render_template
 
 client = Blueprint('client', __name__)

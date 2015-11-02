@@ -1,17 +1,3 @@
-/**************************************************
- * client.scss - Dan Schlosser <dan@schlosser.io> *                                               *
- *                                                *
- * This file is an example of a file that is the  *
- * root for some pages of the app.  Flask-Assets  *
- * bundles this file, so it should:               *
- *  - Import 'base'								  *
- *  - Import and other files needed for these     *
- *    pages										  *
- * Any other .scss files you import other than    *
- * `base` (like 'navbar') should ideally import   *
- * only `base` to avoid import loops.			  *
- **************************************************/
-
 @import 'base';
 @import 'navbar';
 
