@@ -1,0 +1,17 @@
+{%- extends "template.html" -%}
+{% block title %}Typography | {{ super() }}{% endblock %}
+{% block active_tab %}typography{% endblock %}
+
+{%- block content -%}
+{% from "_formhelpers.html" import render_field %}
+<form method="post" action="/create_organization">
+  {{ form.csrf_token }}
+  <dl>
+    {{ render_field(form.name) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.password) }}
+    {{ render_field(form.confirm) }}
+  </dl>
+  <p><input type="submit" value="Create Organization"></p>
+</form>
+{%- endblock -%}
