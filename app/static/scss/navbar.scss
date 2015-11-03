@@ -2,7 +2,7 @@
 
 nav {
 	height: 3rem;
-	background-color: $blue;
+	background-color: #7AE819;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -19,8 +19,14 @@ nav {
 			color: $white;
 		}
 	}
+
+	ul li:last-child {
+		float: right
+	}
+
 	&.active-tab-home .tab-home,
-	&.active-tab-typography .tab-typography {
+	&.active-tab-events .tab-events,
+	&.active-tab-members .tab-members {
 		border-bottom: 3px solid $white;
 	}
 }
