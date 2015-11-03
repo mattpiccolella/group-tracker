@@ -14,8 +14,12 @@ body {
 	margin: 0 auto;
 }
 
-section {
-	padding: 5rem 0 2rem;
+section:first-child {
+	padding: ($navbar_height + $card_top_padding) 0 0;
+}
+
+section:not(:first-child) {
+  padding: $card_top_padding 0 0;
 }
 
 .card {

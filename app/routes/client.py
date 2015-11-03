@@ -32,6 +32,7 @@ def home():
 def events():
   organization = Organization.objects(id=session["organization_id"]).first()
   events = Event.objects(organization=organization)
+  print events.count()
   return render_template('client/events.html', events=events)
 
 @client.route('/members', methods=['GET'])
@@ -53,7 +54,7 @@ def login():
         else:
             session["email"] = users[0].email
             session["organization_id"] = str(users[0].id)
-            return redirect(url_for(".home", organization_id=str(users[0].id)))
+            return redirect(url_for(".home"))
     return render_template('client/login.html', form=form)
 
 @client.route('/logout', methods=['GET','POST'])

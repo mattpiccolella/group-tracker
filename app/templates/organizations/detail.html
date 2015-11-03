@@ -1,6 +1,9 @@
-{%- extends "content.html" -%}
-{% block title %}Typography | {{ super() }}{% endblock %}
-{% block active_tab %}typography{% endblock %}
+{%- if auth -%}
+  {%- extends "auth_content.html" -%}
+{% else -%}
+  {%- extends "content.html" -%}
+{% endif -%}
+{% block title %}Organization | {{ super() }}{% endblock %}
 
 {%- block content -%}
 <section>
