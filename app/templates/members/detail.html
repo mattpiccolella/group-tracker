@@ -1,0 +1,21 @@
+{%- if auth -%}
+  {%- extends "auth_content.html" -%}
+{% else -%}
+  {%- extends "content.html" -%}
+{% endif -%}
+{% block title %}Member | {{ super() }}{% endblock %}
+
+{%- block content -%}
+<section>
+  <div class="content card">
+    <h2 id="flask-seed">{{member.name}}</h2>
+    <h3>{{member.organization.name}}</h3>
+    <h4>Some events attended</h4>
+    <ul>
+    {%- for event in events -%}
+      <li><a href="/events/{{event.id}}">{{event.name}}</a></li>
+    {%- endfor -%}
+    </ul>
+  </div>
+</section>
+{%- endblock -%}

@@ -4,7 +4,12 @@
 {%- block content -%}
 <section>
   <div class="content card">
-    <h1>Members Go Here</h1>
+    <h2>Members</h2>
+    <ul>
+      {%- for member in members -%}
+      <li><a href="/members/{{member.id}}">{{member.name}}</a></li>
+      {%- endfor -%}
+    </ul>
   </div>
 </section>
 {%- endblock -%}

@@ -6,8 +6,8 @@
 <section>
   <div class="content card">
     <h1>{{organization.name}}</h1>
-    <p>{{number_of_events}} events</p>
-    <p>{{number_of_members}} members</p>
+    <p><a href="{{ url_for('client.events') }}">{{number_of_events}} events</a></p>
+    <p><a href="{{ url_for('client.members') }}">{{number_of_members}} members</a></p>
   </div>
 </section>
 {%- endblock -%}
