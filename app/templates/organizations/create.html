@@ -1,0 +1,21 @@
+{%- extends "content.html" -%}
+{% block title %}Typography | {{ super() }}{% endblock %}
+{% block active_tab %}typography{% endblock %}
+
+{%- block content -%}
+<section>
+  <div class="content card">
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post">
+      {{ form.csrf_token }}
+      <dl>
+        {{ render_field(form.name) }}
+        {{ render_field(form.email) }}
+        {{ render_field(form.password) }}
+        {{ render_field(form.confirm) }}
+      </dl>
+      <p><input type="submit" value="Create Organization"></p>
+    </form>
+  </div>
+</section>
+{%- endblock -%}

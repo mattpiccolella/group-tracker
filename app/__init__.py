@@ -63,9 +63,10 @@ def register_logger(app):
 
 
 def register_blueprints(app):
-    from app.routes import organizations, client
+    from app.routes import organizations, client, events
     app.register_blueprint(organizations, url_prefix="/organization")
     app.register_blueprint(client)
+    app.register_blueprint(events, url_prefix="/events")
 
 
 def register_scss():

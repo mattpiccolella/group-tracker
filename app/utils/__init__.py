@@ -6,4 +6,4 @@ def hash_pass(password):
   hash_password = hashlib.sha1(hash_password).hexdigest()
   hash_password = '*' + hash_password.upper()
   return hash_password
-  
+

@@ -1,0 +1,13 @@
+{%- extends "content.html" -%}
+{%- block title -%}Home | {{ super() }}{%- endblock -%}
+{% block active_tab %}home{% endblock %}
+
+{%- block content -%}
+<section>
+  <div class="content card">
+    <h1>{{organization.name}}</h1>
+    <p>{{number_of_events}} events</p>
+    <p>{{number_of_members}} members</p>
+  </div>
+</section>
+{%- endblock -%}

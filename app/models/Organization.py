@@ -18,4 +18,4 @@ class Organization(db.Document):
         self.date_modified = datetime.now()
 
     def __repr__(self):
-        return '<User name={}, email={}>'.format(self.name, self.email)
+        return '<Organization name={}, email={}>'.format(self.name, self.email)

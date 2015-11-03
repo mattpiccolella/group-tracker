@@ -1,7 +1,11 @@
-{%- extends "template.html" -%}
+{%- extends "content.html" -%}
 {%- block title -%}Home | {{ super() }}{%- endblock -%}
 {% block active_tab %}home{% endblock %}
 
 {%- block content -%}
-<h1 id="flask-seed">Welcome to Group Tracker</h1>
+<section>
+  <div class="content card">
+    <h1 id="flask-seed">{{event.name}}</h1>
+  </div>
+</section>
 {%- endblock -%}

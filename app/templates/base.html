@@ -53,6 +53,9 @@
     {%- endblock fonts -%}
     {%- block css-%}
     <link rel="stylesheet" type="text/css" href="{{ static('css/lib/reset.min.css') }}">
+    {%- assets "scss_all" -%}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+    {%- endassets -%}
     {%- endblock css-%}
     {%- block analytics -%}
     <!-- Google Analytics go here -->
