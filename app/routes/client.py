@@ -32,7 +32,6 @@ def home():
 def events():
   organization = Organization.objects(id=session["organization_id"]).first()
   events = Event.objects(organization=organization)
-  print events.count()
   return render_template('client/events.html', events=events)
 
 @client.route('/members', methods=['GET'])
